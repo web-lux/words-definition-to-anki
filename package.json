@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "test": "vitest",
         "start": "npm run build:live",
         "build": "tsc -p .",
         "build:live": "nodemon --watch src/index.ts --exec \"ts-node\" src/index.ts"
@@ -18,7 +17,6 @@
         "@types/node": "^22.13.10",
         "nodemon": "^3.1.9",
         "ts-node": "^10.9.2",
-        "typescript": "^5.8.2",
-        "vitest": "^3.0.9"
+        "typescript": "^5.8.2"
     }
 }

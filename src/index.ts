@@ -3,7 +3,6 @@ import { stdin, stdout } from 'node:process';
 import util from 'node:util';
 import fs from 'fs';
 import parse from 'node-html-parser';
-import placeholderResponse from './placeholder';
 
 const readFilePromise = util.promisify(fs.readFile);
 
@@ -80,7 +79,7 @@ function getDefinitionsFromHtml(html: string, word: string) {
     });
 
     const definitions = definitionsFromAllSources.find(checkIfDefinitionsFound);
-    // We return the first array of definitions found. Sometimes, the Grand Dictionnaire doesn't have one, for example, so we send bakc the next best thing, definitions from Le Dictionnaire.
+    // We return the first array of definitions found. Sometimes, the Grand Dictionnaire doesn't have one, for example, so we send back the next best thing, definitions from Le Dictionnaire.
 
     if (!definitions) throw new Error('Error with checkIfDefinitionsFound');
 
